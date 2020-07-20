@@ -17,7 +17,7 @@ class CreateSelectionsTable extends Migration
             $table->id();
             $table->unsignedInteger('question_id');
             $table->unsignedInteger('selection_cd');
-            $table->string('desc', 30);
+            $table->string('description', 30);
             $table->double('repr', 5, 1)->nullable();
             $table->timestamps();
         });

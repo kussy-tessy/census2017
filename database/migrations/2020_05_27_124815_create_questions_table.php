@@ -16,7 +16,7 @@ class CreateQuestionsTable extends Migration
         Schema::create('questions', function (Blueprint $table) {
             $table->id();
             $table->string('name', 50);
-            $table->string('desc', 250);
+            $table->string('description', 250);
             $table->unsignedInteger('question_group_id')->nullable();
             $table->boolean('disp_single')->nullable();
             $table->boolean('disp_corr')->nullable();

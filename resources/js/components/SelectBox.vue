@@ -2,15 +2,15 @@
   <div v-if="!isGroup">
     <select v-model="selectedComputed">
       <option v-for="option in options" v-bind:value="option.id" :key="option.id">
-        {{ option.desc }}
+        {{ option.description }}
       </option>
     </select>
   </div>
   <div v-else>
     <select v-model="selectedComputed">
-      <optgroup v-for="_options in options" :label="_options.desc">
+      <optgroup v-for="_options in options" :label="_options.description">
         <option v-for="option in _options[children]" :value="option.id" :key="option.id">
-          {{ option.desc }}
+          {{ option.description }}
         </option>
       </optgroup>
     </select>

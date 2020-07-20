@@ -43,7 +43,7 @@ class DataController extends Controller
     {
         if($questionId == 90){ // 趣味
             $hobbies = Hobby::all();
-            $response['xlabel'] = $hobbies->pluck('desc');
+            $response['xlabel'] = $hobbies->pluck('description');
             $response['ylabel'] = [null];
             $response['value'] = $hobbies->pluck('count')->map(fn($v) => [$v]);
             $response['repr'] = [null];
@@ -57,7 +57,7 @@ class DataController extends Controller
         $rawValue = $answer->get([$question->name])->pluck($question->name)->countBy();
         $value = $questionSelections->pluck('selection_cd')->map(fn($cd) => $rawValue[$cd] ?? 0)->sortKeys();
         
-        $response['xlabel'] = $questionSelections->pluck('desc');
+        $response['xlabel'] = $questionSelections->pluck('description');
         $response['ylabel'] = [null];
         $response['value'] = $value->map(fn($va) => [$va])->all();
         $response['repr'] = $questionSelections->pluck('repr');
@@ -84,8 +84,8 @@ class DataController extends Controller
         }
 
         $response['isQuant'] = $secondQuestion->is_quant;
-        $response['xlabel'] = $firstQuestionSelections->pluck('desc');
-        $response['ylabel'] = $secondQuestionSelections->pluck('desc');
+        $response['xlabel'] = $firstQuestionSelections->pluck('description');
+        $response['ylabel'] = $secondQuestionSelections->pluck('description');
         $response['value'] = $values;
         $response['repr'] = $secondQuestionSelections->pluck('repr');
 

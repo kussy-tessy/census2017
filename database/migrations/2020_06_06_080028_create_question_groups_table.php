@@ -15,7 +15,7 @@ class CreateQuestionGroupsTable extends Migration
     {
         Schema::create('question_groups', function (Blueprint $table) {
             $table->id();
-            $table->string('desc', 30);
+            $table->string('description', 30);
             $table->timestamps();
         });
     }
