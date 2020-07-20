@@ -92,10 +92,7 @@
             position: 'bottom'
           }
         }
-        if (this.dataIsSingle){
-          options.legend['display'] = false;
-        }
-        if(this.dispChart){
+        if (this.dataIsSingle || this.dispChart === 'line'){
           options.legend['display'] = false;
         }
         if (this.disp100percent) {
