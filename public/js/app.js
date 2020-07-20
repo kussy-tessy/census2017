@@ -75699,7 +75699,7 @@ var render = function() {
             return _c(
               "option",
               { key: option.id, domProps: { value: option.id } },
-              [_vm._v("\n      " + _vm._s(option.desc) + "\n    ")]
+              [_vm._v("\n      " + _vm._s(option.description) + "\n    ")]
             )
           }),
           0
@@ -75736,12 +75736,16 @@ var render = function() {
           _vm._l(_vm.options, function(_options) {
             return _c(
               "optgroup",
-              { attrs: { label: _options.desc } },
+              { attrs: { label: _options.description } },
               _vm._l(_options[_vm.children], function(option) {
                 return _c(
                   "option",
                   { key: option.id, domProps: { value: option.id } },
-                  [_vm._v("\n        " + _vm._s(option.desc) + "\n      ")]
+                  [
+                    _vm._v(
+                      "\n        " + _vm._s(option.description) + "\n      "
+                    )
+                  ]
                 )
               }),
               0
