@@ -1969,7 +1969,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       }
     },
     disp100percent: function disp100percent() {
-      return !this.dataIsSingle && this.chart == 'bar' && this.is100percent;
+      return !this.dataIsSingle && this.dispChart == 'bar' && this.is100percent;
     },
     ratios: function ratios() {
       var sums = this.myData.value.map(function (va) {

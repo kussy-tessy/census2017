@@ -47,7 +47,7 @@
         }
       },
       disp100percent(){
-        return !this.dataIsSingle && this.chart == 'bar' && this.is100percent;
+        return !this.dataIsSingle && this.dispChart == 'bar' && this.is100percent;
       },
       ratios: function(){
         const sums = this.myData.value.map(va => va.reduce((a, b) => a + b, 0));
